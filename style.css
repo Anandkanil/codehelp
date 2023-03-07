@@ -1,0 +1,56 @@
+* {
+    font-family: 'Climate Crisis', cursive;
+    font-weight: 900;
+}
+
+.main {
+    display: flex;
+    flex: content;
+    justify-content: center;
+}
+
+.container {
+    padding: 10px;
+    border: 1px solid gray;
+}
+
+h3 {
+    font-family: 'Climate Crisis', cursive;
+}
+
+img {
+    border-radius: 10px;
+}
+
+.details ,p{
+
+    display: inline;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 200px;
+    padding-top: 15px;
+}
+.paras{
+    display: inline-block;
+}
+
+.discount {
+    margin-left: 15px;
+    margin-right: 15px;
+    background-color: #1DD1A1;
+    color: white;
+    font-weight: 900;
+    border-radius: 5px;
+    padding: 5px 10px 5px 10px;
+    border-style: none;
+}
+
+.original-price {
+    color: grey;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.discounted_price {
+    color: #6E96CF;
+}
