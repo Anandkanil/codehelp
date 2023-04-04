@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#wrapper {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 10px;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-style: preserve-3d;
+    height: 100%;
+    z-index: -1;
+    
+}
+
+.background {
+    transform: translateZ(-40px) scale(5);
+}
+
+.foreground {
+    transform: translateZ(-20px) scale(3);
+}
+
+.background,
+.foreground {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+h1{
+    position: absolute;
+    top: 11rem;
+    color: white;
+    letter-spacing: 4px;
+    font-size: 4rem;
+    font-family: 'Climate Crisis', cursive;
+    text-shadow: 0 0 20px rgba(39, 10, 97, 0.9);
+}
+section{
+        background-color: rgb(45,45,45);
+        padding: 5rem 0;
+        color: white;
+}
+.secheading{
+    font-size: 4rem;
+    padding: 0 2rem;
+}
+.secheading:hover{
+    cursor: pointer;
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+
+.text{
+    font-family: 'Climate Crisis', cursive;
+font-family: 'Poppins', sans-serif;
+    font-size: 1.25rem;
+    padding: 0 3rem;
+    margin: 4rem 0;
+}
+.desc{
+    position: absolute;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    font-family: 'Climate Crisis', cursive;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    padding: 0.5rem 2.5rem;
+    font-weight:600;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+.bg{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+.bg1{
+    background-image: url(sport-1.jpg);
+}
+.bg2{
+    background-image: url(sport-2.jpg);
+}
+.bg3{
+    background-image: url(sport-3.jpg);
+}

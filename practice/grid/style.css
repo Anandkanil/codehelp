@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: blueviolet;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 3px;
+    justify-content: center;
+
+}
+.box{
+    width: 10%;
+    height: 10%;
+    background-color: cadetblue;
+    border: 3px solid black;
+    text-align: center;
+}
