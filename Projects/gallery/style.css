@@ -54,7 +54,16 @@
     
 }
 .card figcaption{
+    width: 100%;
     position: absolute;
-   bottom: 0;
-   left: 0;
+   bottom: 10px;
+   left: 20px;
+   opacity: 0;
+   color: antiquewhite;
+   font-size: 1.3rem;
+}
+.card:hover figcaption{
+    transform: scale(1.04);
+    transition: 0.3s;
+    opacity: 1;
 }
