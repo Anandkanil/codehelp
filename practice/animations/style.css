@@ -30,10 +30,12 @@
     bottom: 0;
     transform: scaleX(0);
     transform-origin: left;
-    transition: all 1s;
+    transition: background-color 0.8s linear,transform 0.8s linear;
     z-index: -1;
 }
 .btn:hover::before{
-    cursor: pointer;
     transform: scaleX(1);
+}
+.btn:hover{    
+    cursor: pointer;
 }
