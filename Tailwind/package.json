@@ -1,0 +1,15 @@
+{
+  "name": "tailwind_demo",
+  "version": "1.0.0",
+  "description": "Tailwind",
+  "main": "index.js",
+  "scripts": {
+    "start": "vite",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vite": "^4.5.0"
+  }
+}
