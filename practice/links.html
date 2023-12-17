@@ -13,4 +13,17 @@
 
 
 </body>
+<script>
+    let fun1=function(e){
+        console.log(e.target.textContent);
+    }
+    let div=document.createElement('div');
+    div.addEventListener('click',fun1);
+    for(let i=0;i<=10;i++){
+        let c=document.createElement('p');
+        c.textContent="This is a para "+i;
+        div.appendChild(c);
+    }
+    document.body.appendChild(div);
+</script>
 </html>
