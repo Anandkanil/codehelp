@@ -7,6 +7,7 @@ const userInfoContainer = document.querySelector('.user-info-container');
 const grantAccessBtn = document.querySelector('[data-grantAccess]');
 const searchInput = document.querySelector('[data-searchInput]');
 const searchForm = document.querySelector('[data-search-form]');
+const errorContainer=document.querySelector('.error-404');
 
 
 let currentTab = userTab;
@@ -76,7 +77,8 @@ async function fetchUserWeatherInfo(coordinates) {
     try {
         const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`);
         const data = await response.json();
-        loadingScreen.classList.remove('active');;
+        loadingScreen.classList.remove('active');
+        errorContainer.classList.remove('active');
         userInfoContainer.classList.add('active');
         renderWeatherInfo(data);
 
@@ -134,7 +136,11 @@ grantAccessBtn.addEventListener('click', getLocation)
 searchForm.addEventListener('submit', (e) => {
     e.preventDefault();
     let searchCity = searchInput.value;
-    if (searchCity === "") return;
+    if (searchCity === "") {
+        errorContainer.classList.remove('active');
+        userInfoContainer.classList.remove('active');
+        return;
+    }
     else {
         fetchSearchWeatherInfo(searchCity);
     }
@@ -149,9 +155,17 @@ async function fetchSearchWeatherInfo(city) {
     try {
         const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`);
         const data = await response.json();
-        userInfoContainer.classList.add('active');
-        loadingScreen.classList.remove('active');
-        renderWeatherInfo(data);
+        if(data?.cod=="404"){
+            loadingScreen.classList.remove('active');
+            errorContainer.classList.add('active');
+        }
+        else{
+            errorContainer.classList.remove('active');
+            userInfoContainer.classList.add('active');
+            loadingScreen.classList.remove('active');
+            renderWeatherInfo(data);
+        }
+        
     }
     catch (e) {
 
