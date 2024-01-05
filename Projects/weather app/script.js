@@ -11,7 +11,7 @@ const errorContainer=document.querySelector('.error-404');
 
 
 let currentTab = userTab;
-let API_KEY = "8f53dd240d6f78c55e08e722c2dc89eb";
+let API_KEY = "";
 currentTab.classList.add("current-tab");
 getfromSessionStorage();
 
